@@ -88,3 +88,98 @@ if (contactForm) {
         contactForm.reset();
     });
 }
+// Intersection Observer for Smooth Scroll Reveal
+document.addEventListener('DOMContentLoaded', () => {
+  const observerOptions = {
+    root: null,
+    threshold: 0.15 // Triggers when 15% of the element is visible
+  };
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal');
+        observer.unobserve(entry.target); // Animate only once for performance
+      }
+    });
+  }, observerOptions);
+
+  // Target section title and service cards
+  const animatableElements = document.querySelectorAll('.section-title, .service-card');
+  animatableElements.forEach(el => revealObserver.observe(el));
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const observerOptions = {
+    root: null,
+    threshold: 0.15
+  };
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  /* Target section titles, service cards, and project cards */
+  const animatableElements = document.querySelectorAll('.section-title, .service-card, .project-card');
+  animatableElements.forEach(el => revealObserver.observe(el));
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const observerOptions = {
+    root: null,
+    threshold: 0.15
+  };
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  const animatableElements = document.querySelectorAll('.section-title, .service-card, .project-card');
+  animatableElements.forEach(el => revealObserver.observe(el));
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const observerOptions = {
+    root: null,
+    threshold: 0.15
+  };
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  /* Target all sections, cards, and contact form for scroll reveal */
+  const animatableElements = document.querySelectorAll('.section-title, .service-card, .project-card, .contact-form');
+  animatableElements.forEach(el => revealObserver.observe(el));
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const observerOptions = {
+    root: null,
+    threshold: 0.15
+  };
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  /* Target all elements including about-section */
+  const animatableElements = document.querySelectorAll('.section-title, .about-section, .service-card, .project-card, .contact-form');
+  animatableElements.forEach(el => revealObserver.observe(el));
+});
